@@ -328,14 +328,12 @@ function SelectorEditor(panel)
     this.tabCompletion = true;
     this.completeAsYouType = false;
     this.fixedWidth = true;
-
-    this.autoCompleter = Firebug.CommandLine.autoCompleter;
 }
 
 SelectorEditor.prototype = domplate(Firebug.InlineEditor.prototype,
 {
     tag:
-        INPUT({"class": "fixedWidthEditor selectionElement a11yFocusNoTab",
+        INPUT({"class": "fixedWidthEditor a11yFocusNoTab",
             type: "text", title:$STR("Selector"),
             oninput: "$onInput", onkeypress: "$onKeyPress"}),
 
