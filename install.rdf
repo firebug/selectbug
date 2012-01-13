@@ -21,6 +21,7 @@
     <em:description>CSS selectors sidepanel for Firebug.</em:description>
     <em:creator>John J. Barton</em:creator>
     <em:contributor>Jan Odvarko</em:contributor>
+    <em:contributor>Sebastian Zartner</em:contributor>
     <em:homepageURL>http://getfirebug.com/releases/extensions.html#selectbug</em:homepageURL>
 
     <em:updateURL>https://getfirebug.com/releases/selectbug/update.rdf</em:updateURL>
