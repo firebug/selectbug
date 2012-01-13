@@ -23,6 +23,6 @@
     <em:contributor>Jan Odvarko</em:contributor>
     <em:homepageURL>http://getfirebug.com/releases/extensions.html#selectbug</em:homepageURL>
 
-    <em:updateURL>https://getfirebug.com/releases/selectbug/1.5/update.rdf</em:updateURL>
+    <em:updateURL>https://getfirebug.com/releases/selectbug/update.rdf</em:updateURL>
   </Description>
 </RDF>
