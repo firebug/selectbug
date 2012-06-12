@@ -150,10 +150,22 @@ SelectorPanel.prototype = extend(Firebug.Panel,
     getSelectedElements: function(selectorText)
     {
         var selections = Firebug.currentContext.window.document.querySelectorAll(selectorText);
-        if (selections instanceof NodeList)
-            return selections;
+
+        // For some reason the return value of querySelectorAll()
+        // is not recognized as a NodeList anymore since Firefox 10.0.
+        // See issue 5442.
+        if (selections)
+        {
+            var elements = [];
+            for (var i = 0; i < selections.length; ++i)
+              elements.push(selections[i]);
+
+            return elements;
+        }
         else
+        {
             throw new Error("Selection Failed: "+selections);
+        }
     },
 
     /**
@@ -172,7 +184,7 @@ SelectorPanel.prototype = extend(Firebug.Panel,
                     var selectorText = this.selection;
 
                 var elements = this.getSelectedElements(selectorText);
-                if (elements && elements.length)
+                if (elements && elements.length != 0)
                 {
                     SelectorTemplate.tag.replace({object: elements}, this.panelNode);
                     this.showTrialSelector(this.trialSelector);
