@@ -6,7 +6,7 @@
 <project name="selectbug" basedir="." default="build">
 
     <!-- Directories -->
-    <property name="build.dir" value="../../build"/>
+    <property name="build.dir" value="build"/>
 	 
     <!-- Properties -->
     <property file="ant.properties"/>
